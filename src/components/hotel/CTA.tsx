@@ -1,0 +1,4 @@
+import { ArrowUpRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Reveal } from './shared';
+export function CTA() { return <section className="bg-primary py-20 text-primary-foreground md:py-25"><Reveal className="mx-auto flex max-w-[1320px] flex-col items-start justify-between gap-8 px-5 md:flex-row md:items-center md:px-10 xl:px-16"><div><p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.23em] text-gold">Your stay starts here</p><h2 className="max-w-2xl font-display text-4xl leading-tight md:text-5xl">Ready to experience <em className="text-gold">comfort?</em></h2><p className="mt-4 text-sm text-primary-foreground/70">We look forward to welcoming you to Kannur.</p></div><Button asChild className="h-12 shrink-0 rounded-sm bg-gold px-8 text-xs font-semibold uppercase tracking-[0.12em] text-gold-foreground hover:bg-gold/90"><a href="#booking">Book your stay <ArrowUpRight /></a></Button></Reveal></section>; }

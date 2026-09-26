@@ -1,0 +1,3 @@
+- [x] Match Hotel Grand Benale's available live branding, imagery, and verified details.
+- [x] Build the responsive homepage sections and interactions.
+- [x] Verify booking, gallery, mobile layout, and current preview diagnostics.

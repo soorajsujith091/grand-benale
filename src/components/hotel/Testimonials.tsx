@@ -1,0 +1,13 @@
+import { useState } from 'react';
+import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Reveal, SectionHeading } from './shared';
+const highlights = [
+  { title: 'Comfort that feels personal', text: 'A welcoming place to slow down after a day exploring Kannur.' },
+  { title: 'Stay close to Kannur', text: 'A convenient city location for exploring the coast and surrounding landmarks.' },
+  { title: 'Warm Malabar hospitality', text: 'Thoughtful service and a genuine sense of welcome are at the heart of every stay.' },
+];
+export function Testimonials() {
+ const [index, setIndex] = useState(0);
+ return <section className="bg-background py-24 md:py-30"><div className="mx-auto grid max-w-[1320px] gap-12 px-5 md:grid-cols-[0.8fr_1.2fr] md:items-center md:gap-20 md:px-10 xl:px-16"><Reveal><SectionHeading eyebrow="Guest impressions" title="A stay worth remembering" /><div className="flex items-center gap-4"><strong className="font-display text-6xl text-foreground">8.8<span className="text-2xl text-muted-foreground">/10</span></strong><p className="text-xs text-muted-foreground">Excellent · Expedia guest rating</p></div><a href="https://www.expedia.com/Kannur-Hotels-Grand-Benale.h127195175.Hotel-Information" target="_blank" rel="noopener noreferrer" className="mt-7 inline-flex items-center gap-2 border-b border-gold pb-1 text-xs font-semibold uppercase tracking-[0.12em] text-foreground">Read guest reviews <ExternalLink size={14} /></a></Reveal><Reveal className="border-l-2 border-gold pl-7 md:pl-12"><p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.2em] text-gold-dark">Stay highlights</p><h3 className="font-display text-3xl text-foreground md:text-4xl">{highlights[index]!.title}</h3><p className="mt-5 max-w-xl text-base leading-8 text-muted-foreground">{highlights[index]!.text}</p><p className="mt-7 text-[10px] font-semibold uppercase tracking-[0.2em] text-gold-dark">The Grand Benale experience</p><div className="mt-9 flex items-center gap-3"><Button variant="outline" size="icon" aria-label="Previous highlight" className="rounded-full border-border" onClick={() => setIndex((index-1+highlights.length)%highlights.length)}><ArrowLeft size={17} /></Button><Button variant="outline" size="icon" aria-label="Next highlight" className="rounded-full border-border" onClick={() => setIndex((index+1)%highlights.length)}><ArrowRight size={17} /></Button><span className="ml-4 text-xs tracking-widest text-muted-foreground">0{index+1} / 0{highlights.length}</span></div></Reveal></div></section>;
+}
