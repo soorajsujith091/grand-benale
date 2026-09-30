@@ -3,13 +3,13 @@ import lobby from '@/assets/hotel/about-scaled.jpg.asset.json';
 import dining from '@/assets/hotel/services-scaled.jpg.asset.json';
 import room from '@/assets/hotel/rooms-scaled.jpg.asset.json';
 import restaurant from '@/assets/hotel/18094.jpg.asset.json';
-import reception from '@/assets/hotel/contact-scaled.jpg.asset.json';
+
 import whiteLogo from '@/assets/hotel/grand-benale-white-logo1.png.asset.json';
 import darkLogo from '@/assets/hotel/grand-benale-logo1.png.asset.json';
 
 export const hotel = {
   hero: '/images/Gemini_Generated_Image_b4hkfrb4hkfrb4hk.png', lobby: '/images/hotel_lobby.png', dining: '/images/fine_dining.png', room: '/images/standard_room.png',
-  restaurant: '/images/fine_dining.png', reception: reception.url, events: '/images/events_hall.png',
+  restaurant: '/images/fine_dining.png', reception: '/images/reception.png', events: '/images/events_hall.png',
   whiteLogo: '/images/grand-benale-white-logo1.webp', darkLogo: '/images/grand-benale-white-logo1.webp',
   email: 'info@grandbenale.com', phone: '+91 928 803 4446',
   address: 'Kakkad Road, Kannur, Kerala, India',

@@ -112,6 +112,8 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+import { ScrollToTop } from "../components/hotel/ScrollToTop";
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
@@ -119,6 +121,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <ScrollToTop />
     </QueryClientProvider>
   );
 }
