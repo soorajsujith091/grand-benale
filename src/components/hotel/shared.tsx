@@ -14,7 +14,7 @@ export function Photo({ src, alt, className = '', priority = false }: { src: str
   }, [src]);
   return <div className={`relative overflow-hidden bg-muted ${className}`}>
     {!loaded && <div className="absolute inset-0 animate-pulse bg-muted" aria-hidden="true" />}
-    <img ref={imageRef} src={src} alt={alt} loading={priority ? 'eager' : 'lazy'} fetchPriority={priority ? 'high' : undefined} onLoad={() => setLoaded(true)} className={`h-full w-full object-cover transition-[opacity,transform] duration-700 ${loaded ? 'opacity-100' : 'opacity-0'} group-hover:scale-105`} />
+    <img ref={imageRef} src={src} alt={alt} loading={priority ? 'eager' : 'lazy'} fetchPriority={priority ? 'high' : undefined} onLoad={() => setLoaded(true)} className={`h-full w-full object-cover transition-opacity duration-700 ${loaded ? 'opacity-100' : 'opacity-0'}`} />
   </div>;
 }
 export function SectionHeading({ eyebrow, title, description, light = false }: { eyebrow: string; title: string; description?: string; light?: boolean }) {

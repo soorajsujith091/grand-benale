@@ -32,13 +32,12 @@ export function Rooms() {
         
         <div className="grid gap-6 md:grid-cols-3">
           {rooms.map((room, i) => (
-            <Reveal key={room.name} className="group flex flex-col overflow-hidden bg-white shadow-sm transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-xl border border-gray-100">
+            <Reveal key={room.name} className="group flex flex-col overflow-hidden bg-white shadow-sm transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl border border-gray-100">
               <Photo src={room.image} alt={`Guest room at Hotel Grand Benale — ${room.name}`} className="aspect-[4/3]" />
               <div className="flex flex-1 flex-col p-6">
                 <span className="mb-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#dca11d]">0{i+1} / Accommodation</span>
                 <h3 className="font-display text-2xl italic text-gray-900">{room.name}</h3>
                 <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 border-b border-gray-100 pb-5 text-xs text-gray-500">
-                  <span className="inline-flex items-center gap-2"><Maximize size={15} className="text-[#dca11d]" />{room.size}</span>
                   <span className="inline-flex items-center gap-2"><Users size={15} className="text-[#dca11d]" />{room.occupancy}</span>
                 </div>
                 <div className="mt-5 flex flex-wrap items-center gap-4 text-xs text-gray-500">

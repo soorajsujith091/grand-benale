@@ -18,12 +18,12 @@ export const nav = [
   { label: 'Home', href: '/#home' }, { label: 'Rooms', href: '/#rooms' },
   { label: 'Amenities', href: '/#amenities' }, { label: 'Gallery', href: '/#gallery' },
   { label: 'About', href: '/#about' }, { label: 'Contact', href: '/#contact' },
-  { label: 'Careers', href: '/career' },
+  { label: 'Careers', href: 'https://mail.google.com/mail/?view=cm&fs=1&to=hr@benaleinternational.com&su=Career%20Application' },
 ];
 export const rooms = [
-  { name: 'Standard Double Room', size: '150 sq ft', occupancy: '2 guests', bed: 'Queen bed', image: '/images/standard_room.png' },
-  { name: 'Deluxe Double Room', size: '200 sq ft', occupancy: '3 guests', bed: 'King bed', image: '/images/deluxe_room.png' },
-  { name: 'Luxury Suite', size: '300 sq ft', occupancy: '3 guests', bed: 'King bed', image: '/images/luxury_suite.png' },
+  { name: 'Standard Double Room', occupancy: '2 guests', bed: 'Queen bed', image: '/images/standard_room.png' },
+  { name: 'Deluxe Double Room', occupancy: '3 guests', bed: 'King bed', image: '/images/deluxe_room.png' },
+  { name: 'Luxury Suite', occupancy: '3 guests', bed: 'King bed', image: '/images/luxury_suite.png' },
 ];
 export const gallery = [
   { src: hotel.hero, alt: 'Hotel Grand Benale exterior at dusk', label: 'The hotel' },

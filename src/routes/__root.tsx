@@ -112,10 +112,25 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+import Lenis from 'lenis';
 import { ScrollToTop } from "../components/hotel/ScrollToTop";
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+
+  useEffect(() => {
+    const lenis = new Lenis();
+    let rafId: number;
+    function raf(time: number) {
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
+    }
+    rafId = requestAnimationFrame(raf);
+    return () => {
+      cancelAnimationFrame(rafId);
+      lenis.destroy();
+    };
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
