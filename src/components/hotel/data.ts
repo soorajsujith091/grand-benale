@@ -18,7 +18,7 @@ export const nav = [
   { label: 'Home', href: '/#home' }, { label: 'Rooms', href: '/#rooms' },
   { label: 'Amenities', href: '/#amenities' }, { label: 'Gallery', href: '/#gallery' },
   { label: 'About', href: '/#about' }, { label: 'Contact', href: '/#contact' },
-  { label: 'Careers', href: 'https://mail.google.com/mail/?view=cm&fs=1&to=hr@benaleinternational.com&su=Career%20Application' },
+  { label: 'Careers', href: 'mailto:hr@benaleinternational.com' },
 ];
 export const rooms = [
   { name: 'Standard Double Room', occupancy: '2 guests', bed: 'Queen bed', image: '/images/standard_room.png' },
